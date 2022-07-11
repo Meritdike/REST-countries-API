@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background:hsl(0, 0%, 98%);
+    --background-element: hsl(0, 0%, 100%);
+    --color: hsl(200, 15%, 8%);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+body.dark {
+    background-color: hsl(207, 26%, 17%);
+    --color: hsl(0, 0%, 100%);
+    --background-element: hsl(209, 23%, 22%);
+    --background: hsl(207, 26%, 17%);
+}
+
+.header {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 10px 5px red; */
+    background-color: var(--background-element);
+    color: var(--color);
+}
+
+#main-body {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+h1, h5 {
+    font-size: 18px;
+}
+
+.btn {
+    color: var(--color) !important;
+    transition: none;
+    font-size: 15px;
+}
+
+.mode {
+    font-size: 13px;
+}
+
+.bi-moon-fill {
+    display: none;
+}
+
+body.dark .bi-moon-fill {
+    display: inline-block;
+}
+
+body.dark .bi-moon {
+    display: none;
+}
+
+input[type="search"], button.dropdown-toggle {
+    background-color: var(--background-element);
+    transition: none !important;
+    color: var(--color);
+}
+
+.form-control:focus {
+    background-color: var(--background-element);
+    color: var(--color);
+}
+
+.search::placeholder {
+    color: var(--color);
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    background-color: var(--background-element);
+    transition: 0.2s ease-in-out;
+}
+
+.dropdown-item {
+    color: var(--color);
+    font-size: 14px;
+}
+
+.dropdown-item:active {
+    color: hsl(200, 15%, 8%);
+    background-color: rgba(205, 209, 212, 0.8);
+}
+
+.card {
+    border-radius: 8px;
+    background-color: var(--background-element);
+    color: var(--color);
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+@media (max-width: 767px) {
+   #countries-section .container {
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 426px) {
+    h1, h5 {
+        font-size: 14px !important;
+    }
+
+    .mode {
+        font-size: 10px !important;
+    }
+}
