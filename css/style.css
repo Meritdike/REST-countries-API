@@ -62,24 +62,11 @@ body.dark .bi-moon {
     display: none;
 }
 
-#country-details {
-    color: var(--color);
-    background-color: var(--background);
-}
-
-.show {
-    display: none;
-}
-
-input[type="search"], button.dropdown-toggle, .btn-details {
+input[type="search"], button.dropdown-toggle {
     background-color: var(--background-element);
     transition: none !important;
     color: var(--color);
 }
-
-/* .btn-details {
-    
-} */
 
 .form-control:focus {
     background-color: var(--background-element);
@@ -118,21 +105,7 @@ input[type="search"], button.dropdown-toggle, .btn-details {
     object-fit: cover;
 }
 
-/* .height {
-    min-height: 100vh;
-} */
-
 /* TABLET RESPONSIVE SCREEN */
-/* @media (max-width: 992px) {
-    .position-fixed {
-        position: sticky;
-    }
-
-    .height {
-        height: max-content;
-    }
-} */
-
 @media (max-width: 767px) {
    #countries-section .container {
         width: 75% !important;
