@@ -4,8 +4,9 @@ const toggle = document.querySelector('.mode')
 const searchInput = document.querySelector('.search')
 const filterBtn = document.querySelector('.dropdown-menu')
 const filterRegion = filterBtn.querySelectorAll('li')
+const backBtn = document.querySelector('#close-btn')
+const countryDetails = document.querySelector('#country-details')
 
-console.log (url)
 
 countriesArr = [];
 
@@ -28,6 +29,10 @@ const showCountries = (countriesArr) => {
     }
 
     countries.innerHTML = result;
+    countries.addEventListener('click', () => {
+      countryDetails.classList.toggle('show')
+      renderCountryDetails(countriesArr)
+    })
 }
 
 // GET COUNTRIES 
@@ -50,6 +55,15 @@ getCountries();
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 })
+
+// DISPLAY COUNTRY DETAILS
+backBtn.addEventListener('click', () => {
+  countryDetails.classList.toggle('show')
+})
+
+function renderCountryDetails(countriesArr) {
+ 
+}
 
 // SEARCH COUNTRY
 searchInput.addEventListener('input', e =>{
@@ -89,7 +103,7 @@ filterRegion.forEach(filter => {
 
     countryRegion.forEach(region => {
       // COL => CARD => CARD-BODY => CARD-TEXT => COUNTRYREGION
-      if (region.innerText.includes(filter.innerText)) {
+      if (region.innerText.includes(filter.innerText) || filter.innerText ==='All') {
         region.parentElement.parentElement.parentElement.parentElement.style.display ='block';
       } else {
         // COL => CARD => CARD-BODY => CARD-TEXT => COUNTRYREGION
