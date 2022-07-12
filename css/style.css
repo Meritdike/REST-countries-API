@@ -105,12 +105,14 @@ input[type="search"], button.dropdown-toggle {
     object-fit: cover;
 }
 
+/* TABLET RESPONSIVE SCREEN */
 @media (max-width: 767px) {
    #countries-section .container {
         width: 75% !important;
     }
 }
 
+/* MOBILE RESPONSIVE SCREEN */
 @media (max-width: 426px) {
     h1, h5 {
         font-size: 14px !important;
