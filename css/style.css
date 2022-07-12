@@ -102,6 +102,7 @@ input[type="search"], button.dropdown-toggle {
 .card img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    object-fit: cover;
 }
 
 @media (max-width: 767px) {
