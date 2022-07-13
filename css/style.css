@@ -62,7 +62,16 @@ body.dark .bi-moon {
     display: none;
 }
 
-input[type="search"], button.dropdown-toggle {
+#country-details {
+    color: var(--color);
+    background-color: var(--background);
+}
+
+/* .show {
+    display: none;
+} */
+
+input[type="search"], button.dropdown-toggle, .btn-details {
     background-color: var(--background-element);
     transition: none !important;
     color: var(--color);

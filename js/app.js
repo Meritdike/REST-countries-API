@@ -89,7 +89,7 @@ filterRegion.forEach(filter => {
 
     countryRegion.forEach(region => {
       // COL => CARD => CARD-BODY => CARD-TEXT => COUNTRYREGION
-      if (region.innerText.includes(filter.innerText)) {
+      if (region.innerText.includes(filter.innerText) || filter.innerText === 'All') {
         region.parentElement.parentElement.parentElement.parentElement.style.display ='block';
       } else {
         // COL => CARD => CARD-BODY => CARD-TEXT => COUNTRYREGION
