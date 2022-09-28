@@ -7,13 +7,13 @@ const filterRegion = filterBtn.querySelectorAll('li')
 
 console.log (url)
 
-countriesArr = [];
+let countriesArr = [];
 
 const showCountries = (countriesArr) => {
     result = '';
     for (let i = 0; i < countriesArr.length; i++) {
         result += `<div class="col-lg-3 col-md-4 col-12 my-3">
-        <div class="card border-0 shadow-sm h-100">
+        <div class="card border-0 shadow-sm h-100" onclick="countryDetail()">
           <img src=${countriesArr[i].flag} class="card-img-top h-100" alt=${countriesArr[i].name}>
           <div class="card-body">
             <h5 class="card-title fw-bold pb-2 country-name">${countriesArr[i].name}</h5>
@@ -54,8 +54,6 @@ toggle.addEventListener('click', () => {
 // SEARCH COUNTRY
 searchInput.addEventListener('input', e =>{
   let input = e.target.value;
-
-  console.log(input)
   let countryName = document.querySelectorAll('.country-name');
 
   for (let i = 0; i < countryName.length; i++) {
@@ -79,9 +77,6 @@ searchInput.addEventListener('input', e =>{
 })
 
 // FILTER COUNTRY REGIONS
-
-console.log(filterRegion)
-console.log('hello')
 filterRegion.forEach(filter => {
   filter.addEventListener('click', () => {
     console.log(filter.innerHTML)
@@ -115,3 +110,13 @@ filterRegion.forEach(filter => {
 //     }
 //   })
 // }
+
+
+//Country Details
+async function countryDetail(name) {
+  let response = await fetch(`https://restcountries.com/v2/name/${name}`);
+  let data = await response.json();
+  console.log(data);
+  localStorage.setItem('countryDetail', JSON.stringify(data));
+  // window.location.href = `details.html?codes=${code}`;
+}

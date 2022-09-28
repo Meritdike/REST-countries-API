@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <title>REST Countries</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <div>
+            <h1 class="fw-bold mb-0">Where in the world?</h1>
+          </div>
+          <div>
+            <button type="button" class="mode btn fw-bold shadow-none">
+              <i class="bi bi-moon-fill me-1 text-white"></i
+              ><i class="bi bi-moon me-1"></i>Dark Mode
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main-body">
+        <section id="country-details">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="container">
+                    <button type="button" class="btn btn-details shadow-sm fw-bold mt-4" id="close-btn"><i
+                            class="bi bi-arrow-left me-2"></i>Back</button>
+                    <div class="row justify-content-between align-items-center pt-4" id="details">
+                        <h2 class="fw-bold">Countries Loading....</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+  </body>
+</html>
