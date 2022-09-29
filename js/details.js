@@ -56,4 +56,4 @@ function renderDetail() {
     document.querySelector('.capital').innerHTML += countryDetail.capital;
 }
 
-// renderDetail();
+renderDetail();
